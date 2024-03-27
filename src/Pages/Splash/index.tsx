@@ -1,16 +1,20 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import Logo from '../../assets/icons/Logo.svg'
+import React, { useEffect } from 'react'
+import Logo from '../../assets/icon/Logo.svg'
 
-const Splash = () => {
+const Splash = ({navigation}) => {
+  useEffect(() => {
+    setTimeout(() => 
+      navigation.replace('SignIn'), 3000 );
+    }, []);
   return (
     <View style={styles.container}>
         <Logo/>
       <Text style={styles.text}>Money Tracker</Text>
     </View>
   )
-}
 
+  }
 export default Splash
 
 const styles = StyleSheet.create({
