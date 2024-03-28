@@ -1,6 +1,8 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Splash, SignIn, SignUp, Home } from "../Pages";
+import { Splash, SignIn, SignUp, Home, CashOnHand } from "../Pages";
+import CashOnBank from "../Pages/CashOnBank";
+
 const Stack = createNativeStackNavigator();
 
 const Router = () => {
@@ -24,6 +26,16 @@ const Router = () => {
       <Stack.Screen
        name="Home"
        component={Home}
+       options={{headerShown: false}}
+      />
+       <Stack.Screen
+       name="CashOnHand"
+       component={CashOnHand}
+       options={{headerShown: false}}
+     />
+      <Stack.Screen
+       name="CashOnBank"
+       component={CashOnBank}
        options={{headerShown: false}}
      />
       </Stack.Navigator>

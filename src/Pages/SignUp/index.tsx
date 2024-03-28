@@ -24,7 +24,6 @@ const SignUp = () => {
         <Button label="Continue" 
           onPress={() => navigation.navigate('Home')}
         />
-        
         <Gap height={12} />
       </View>
     </View>
